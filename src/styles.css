@@ -849,3 +849,237 @@ footer {
 .sw i:last-child {
   border-radius: 0 7px 7px 0;
 }
+
+/* ---------- Interaction polish ---------- */
+a {
+  transition: color 0.25s ease, opacity 0.25s ease;
+}
+nav a {
+  position: relative;
+  transition: color 0.25s ease;
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 1px;
+  background: rgb(var(--a2-rgb));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.28s ease;
+}
+nav a:hover::after {
+  transform: scaleX(1);
+}
+.brand {
+  transition: opacity 0.25s ease;
+}
+.brand:hover {
+  opacity: 0.9;
+}
+.logo {
+  transition: transform 0.35s ease;
+}
+.brand:hover .logo {
+  transform: rotate(-6deg) scale(1.05);
+}
+.navbtn,
+.btn {
+  transition: transform 0.25s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+.navbtn:hover,
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(var(--a1-rgb), 0.28);
+  filter: brightness(1.06);
+}
+.navbtn:active,
+.btn:active {
+  transform: translateY(0) scale(0.99);
+}
+.ghost {
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+.ghost:hover {
+  background: rgba(var(--text-rgb), 0.07);
+  border-color: rgba(var(--a1-rgb), 0.5);
+  transform: translateY(-2px);
+}
+.hamb {
+  transition: border-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+.hamb:hover {
+  border-color: rgb(var(--a2-rgb));
+}
+.hamb:active {
+  transform: scale(0.95);
+}
+.kicker::before {
+  transition: width 0.3s ease;
+}
+.kicker:hover::before {
+  width: 34px;
+}
+h1 span {
+  background-size: 200% auto;
+  animation: shine 7s linear infinite;
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+.service {
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), border-color 0.3s ease,
+    box-shadow 0.35s ease;
+}
+.service:hover {
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(var(--a1-rgb), 0.1);
+}
+.ico {
+  transition: transform 0.35s ease, background 0.3s ease;
+}
+.service:hover .ico {
+  transform: translateY(-3px) rotate(-4deg);
+  background: rgba(var(--a1-rgb), 0.16);
+}
+.service a {
+  display: inline-block;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+.service a:hover {
+  color: rgb(var(--a1-rgb));
+  transform: translateX(4px);
+}
+.step {
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+.step:hover {
+  transform: translateY(-4px);
+  border-color: rgba(var(--a2-rgb), 0.28);
+  background: rgba(var(--text-rgb), 0.04);
+}
+.work {
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), border-color 0.3s ease,
+    box-shadow 0.35s ease;
+}
+.work:hover {
+  transform: translateY(-6px);
+  border-color: rgba(var(--a1-rgb), 0.3);
+  box-shadow: 0 26px 55px rgba(0, 0, 0, 0.35);
+}
+.workpic svg {
+  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.work:hover .workpic svg {
+  transform: scale(1.12) rotate(-3deg);
+}
+.pill {
+  transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+.work:hover .pill {
+  color: rgb(var(--a2-rgb));
+  border-color: rgba(var(--a2-rgb), 0.35);
+  background: rgba(var(--a2-rgb), 0.08);
+}
+.points span {
+  transition: color 0.25s ease;
+}
+.points span:hover {
+  color: rgb(var(--a2-rgb));
+}
+input,
+select,
+textarea {
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+.detail span {
+  transition: color 0.25s ease;
+}
+.detail:hover span {
+  color: rgb(var(--a1-rgb));
+}
+.footlinks a {
+  transition: color 0.25s ease;
+}
+.footlinks a:hover {
+  color: rgb(var(--a2-rgb));
+}
+.halo {
+  animation: drift 10s ease-in-out infinite;
+}
+.ring {
+  animation: drift 13s ease-in-out infinite;
+}
+.ring.r2 {
+  animation-duration: 16s;
+  animation-delay: -4s;
+}
+.live i {
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes drift {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -12px;
+  }
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 10px rgb(var(--a2-rgb));
+  }
+  50% {
+    opacity: 0.55;
+    box-shadow: 0 0 22px rgb(var(--a2-rgb));
+  }
+}
+.hero .kicker,
+.hero h1,
+.hero p,
+.hero .actions,
+.hero .meta,
+.hero .brain-card {
+  animation: fadeUp 0.8s ease both;
+}
+.hero h1 {
+  animation-delay: 0.08s;
+}
+.hero p {
+  animation-delay: 0.16s;
+}
+.hero .actions {
+  animation-delay: 0.24s;
+}
+.hero .meta {
+  animation-delay: 0.32s;
+}
+.hero .brain-card {
+  animation-delay: 0.2s;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
