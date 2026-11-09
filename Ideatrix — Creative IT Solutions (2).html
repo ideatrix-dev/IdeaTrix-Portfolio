@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ideatrix — Creative IT Solutions</title>
+<meta name="description" content="Ideatrix — websites, software, mobile apps and digital marketing for ambitious businesses.">
+<style>
+:root{--bg:rgb(var(--s1-rgb));--panel:rgb(var(--s3-rgb));--line:rgba(var(--text-rgb),.14);--text:rgb(var(--text-rgb));--muted:rgb(var(--t2-rgb));--blue:rgb(var(--a1-rgb));--mint:rgb(var(--a2-rgb));--purple:rgb(var(--a3-rgb));padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(var(--s1-rgb),0.94);border-bottom:1px solid rgba(var(--text-rgb),0.07);backdrop-filter:blur(16px)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-weight:850;letter-spacing:-.4px}.logo{width:47px;height:47px;display:grid;place-items:center}.logo svg{width:100%;height:100%}.brand small{display:block;color:rgb(var(--t3-rgb));font-size:9px;letter-spacing:2.1px;font-weight:700;margin-top:1px}
+nav{display:flex;align-items:center;gap:28px;color:rgb(var(--t2-rgb));font-size:13px}nav a:hover{color:var(--mint)}.navbtn,.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:12px;padding:13px 18px;background:linear-gradient(115deg,var(--blue),rgb(var(--a3-rgb)));color:rgb(var(--on-rgb));font-weight:800;font-size:13px;cursor:pointer;box-shadow:0 12px 30px rgba(var(--a1-rgb),0.15)}.hamb{display:none;color:rgb(var(--text-rgb));background:none;border:1px solid rgba(var(--text-rgb),0.19);padding:9px 12px;border-radius:9px}
+.hero{position:relative;overflow:hidden;padding:96px 0 84px;background:radial-gradient(ellipse at 80% 42%,rgba(var(--d1-rgb),0.31),transparent 42%),radial-gradient(ellipse at 5% 0%,rgba(var(--d1-rgb),0.31),transparent 38%),var(--bg)}.hero:after{content:"";position:absolute;width:500px;height:500px;border:1px solid rgba(var(--a1-rgb),0.09);border-radius:50%;right:-210px;top:-250px;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center}.kicker{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:850;color:var(--mint);display:flex;align-items:center;gap:10px}.kicker:before{content:"";width:24px;height:1px;background:var(--mint)}
+h1{font-size:clamp(43px,6vw,76px);line-height:1.02;letter-spacing:-3.8px;margin:20px 0 22px;max-width:720px}h1 span{background:linear-gradient(100deg,rgb(var(--a1-rgb)) 15%,rgb(var(--a2-rgb)) 80%);background-clip:text;color:transparent}.hero p{font-size:16px;line-height:1.8;color:var(--muted);max-width:540px}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.ghost{border:1px solid rgba(var(--text-rgb),0.15);background:rgba(var(--text-rgb),0.03);border-radius:12px;padding:13px 18px;font-weight:750;font-size:13px}.meta{display:flex;gap:23px;margin-top:34px;color:rgb(var(--t3-rgb));font-size:11px}.meta span:before{content:"✦";color:var(--mint);margin-right:7px}
+.hero-art{position:relative;min-height:470px;display:grid;place-items:center}.halo{position:absolute;width:390px;height:390px;border-radius:50%;background:radial-gradient(circle,rgba(var(--a1-rgb),0.15) 0,rgba(var(--a3-rgb),0.04) 48%,transparent 70%);border:1px solid rgba(var(--a1-rgb),0.11)}.ring{position:absolute;width:430px;height:210px;border:1px solid rgba(var(--a1-rgb),0.21);border-radius:50%;transform:rotate(-32deg)}.ring.r2{width:360px;height:280px;transform:rotate(53deg);border-color:rgba(var(--a2-rgb),0.15)}
+.brain-card{position:relative;width:min(370px,90%);padding:22px;border:1px solid rgba(var(--a1-rgb),0.20);border-radius:24px;background:linear-gradient(145deg,rgba(var(--d1-rgb),0.87),rgba(var(--s3-rgb),0.93));box-shadow:0 35px 90px #0006,0 0 55px rgba(var(--a1-rgb),0.08);backdrop-filter:blur(12px)}.brain-card-top{display:flex;align-items:center;justify-content:space-between;color:rgb(var(--t3-rgb));font-size:10px;letter-spacing:1.5px}.live{display:flex;gap:5px;align-items:center;color:var(--mint);letter-spacing:0}.live i{width:6px;height:6px;border-radius:50%;background:var(--mint);box-shadow:0 0 10px var(--mint)}.brain-svg{width:100%;height:230px;display:block;margin:12px 0}.brain-stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(var(--text-rgb),0.07);padding-top:15px;gap:10px}.brain-stats b{display:block;font-size:12px}.brain-stats small{font-size:9px;color:rgb(var(--t3-rgb));letter-spacing:1px}
+.strip{border-block:1px solid rgba(var(--text-rgb),0.07);background:rgb(var(--s2-rgb));padding:19px 0}.strip-in{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.strip label{font-size:10px;color:rgb(var(--t3-rgb));letter-spacing:1.5px;font-weight:800}.strip b{font-size:11px;color:rgb(var(--t3-rgb));letter-spacing:1.4px}
+section{padding:90px 0}.head{text-align:center;max-width:700px;margin:0 auto 45px}.head .kicker{justify-content:center;color:rgb(var(--a1-rgb))}.head h2{font-size:clamp(30px,4vw,48px);line-height:1.1;letter-spacing:-1.7px;margin:15px 0}.head p{color:var(--muted);font-size:14px;line-height:1.8;margin:0}
+.services{background:rgb(var(--s2-rgb))}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.service{padding:25px 22px;border:1px solid rgba(var(--text-rgb),0.07);border-radius:18px;background:linear-gradient(145deg,rgb(var(--d1-rgb)),rgb(var(--s3-rgb)));transition:.25s}.service:hover{transform:translateY(-5px);border-color:rgba(var(--a1-rgb),0.33)}.ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:rgba(var(--a1-rgb),0.09);border:1px solid rgba(var(--a1-rgb),0.14);color:rgb(var(--a1-rgb));font-size:22px;margin-bottom:22px}.service h3{font-size:17px;margin:0 0 9px}.service p{font-size:12px;line-height:1.8;color:rgb(var(--t3-rgb));margin:0 0 18px}.service a{font-size:11px;color:var(--mint);font-weight:850}
+.about{display:grid;grid-template-columns:.95fr 1.05fr;align-items:center;gap:70px}.brain-image{position:relative;min-height:390px;border:1px solid rgba(var(--text-rgb),0.07);border-radius:25px;overflow:hidden;background:radial-gradient(circle at 50% 45%,rgba(var(--d1-rgb),0.31),transparent 55%),linear-gradient(145deg,rgb(var(--d1-rgb)),rgb(var(--s2-rgb)));display:grid;place-items:center}.brain-image svg{width:80%;max-width:400px;filter:drop-shadow(0 15px 30px rgba(var(--a1-rgb),0.15))}.image-caption{position:absolute;bottom:20px;left:22px;font-size:10px;letter-spacing:2px;color:rgb(var(--t3-rgb));text-transform:uppercase}.aboutcopy .kicker{color:var(--mint)}.aboutcopy h2{font-size:clamp(31px,4vw,48px);line-height:1.1;letter-spacing:-1.8px;margin:16px 0}.aboutcopy p{color:var(--muted);font-size:14px;line-height:1.9}.points{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:25px}.points span{font-size:12px;font-weight:750;color:rgb(var(--a1-rgb))}.points span:before{content:"↗";color:var(--mint);margin-right:9px}
+.process{background:linear-gradient(180deg,rgb(var(--s2-rgb)),rgb(var(--s1-rgb)))}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.step{padding:26px;border:1px solid rgba(var(--text-rgb),0.07);border-radius:18px;background:rgba(var(--text-rgb),0.02)}.num{color:var(--mint);font-size:10px;letter-spacing:1.7px;font-weight:900}.step h3{margin:15px 0 8px;font-size:17px}.step p{color:rgb(var(--t3-rgb));font-size:12px;line-height:1.8;margin:0}
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.work{border:1px solid rgba(var(--text-rgb),0.07);border-radius:18px;overflow:hidden;background:rgb(var(--s3-rgb))}.workpic{height:185px;display:grid;place-items:center;background:linear-gradient(135deg,rgb(var(--d1-rgb)),rgb(var(--d1-rgb)));position:relative;overflow:hidden}.workpic:before{content:"";position:absolute;width:180px;height:180px;border:1px solid rgba(var(--a1-rgb),0.20);border-radius:50%}.workpic svg{width:80px;position:relative}.work:nth-child(2) .workpic{background:linear-gradient(135deg,rgb(var(--d2-rgb)),rgb(var(--s3-rgb)))}.work:nth-child(3) .workpic{background:linear-gradient(135deg,rgb(var(--d3-rgb)),rgb(var(--s4-rgb)))}.workbody{padding:20px}.workbody h3{font-size:15px;margin:0 0 7px}.workbody p{font-size:12px;line-height:1.7;color:rgb(var(--t3-rgb));margin:0}.pill{display:inline-block;border:1px solid rgba(var(--text-rgb),0.09);color:rgb(var(--t3-rgb));border-radius:50px;padding:5px 9px;font-size:9px;margin-top:13px;letter-spacing:.6px}
+.banner{padding:60px 0;background:linear-gradient(110deg,rgb(var(--d1-rgb)),rgb(var(--d1-rgb)) 55%,rgb(var(--d2-rgb)));border-block:1px solid rgba(var(--text-rgb),0.07)}.banner-in{display:flex;align-items:center;justify-content:space-between;gap:25px}.banner h2{font-size:clamp(27px,4vw,43px);letter-spacing:-1.5px;margin:0 0 8px}.banner p{color:rgb(var(--t2-rgb));font-size:13px;margin:0}
+.contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px}.contact-info h2{font-size:clamp(32px,4vw,48px);line-height:1.1;letter-spacing:-1.7px;margin:15px 0}.contact-info p{font-size:13px;line-height:1.9;color:var(--muted)}.detail{margin-top:24px}.detail strong{display:block;font-size:11px;color:rgb(var(--a1-rgb));letter-spacing:1px}.detail span{font-size:12px;color:rgb(var(--t3-rgb))}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:25px;border:1px solid rgba(var(--text-rgb),0.08);border-radius:19px;background:rgb(var(--s3-rgb))}.field.full{grid-column:1/-1}label{display:block;font-size:9px;letter-spacing:1.5px;color:rgb(var(--t3-rgb));font-weight:850;margin-bottom:8px}input,select,textarea{width:100%;border:1px solid rgba(var(--text-rgb),0.09);border-radius:10px;padding:13px;background:rgb(var(--s1-rgb));color:rgb(var(--a1-rgb));font:inherit;font-size:12px;outline:none}input:focus,select:focus,textarea:focus{border-color:rgb(var(--a1-rgb));box-shadow:0 0 0 3px rgba(var(--a1-rgb),0.09)}textarea{min-height:110px;resize:vertical}select option{background:rgb(var(--s2-rgb))}form button{grid-column:1/-1;justify-self:start}.msg{font-size:11px;color:var(--mint);grid-column:1/-1;margin:0}
+footer{border-top:1px solid rgba(var(--text-rgb),0.07);padding:28px 0;background:rgb(var(--s1-rgb))}.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footbrand{font-size:13px;font-weight:850}.foot small{display:block;color:rgb(var(--t3-rgb));font-size:10px;margin-top:5px}.footlinks{display:flex;gap:20px;color:rgb(var(--t3-rgb));font-size:11px}
+@media(max-width:900px){nav{display:none;position:absolute;top:78px;left:0;right:0;background:rgb(var(--s1-rgb));padding:22px 4%;flex-direction:column;align-items:flex-start;border-bottom:1px solid rgba(var(--text-rgb),0.09)}nav.show{display:flex}.hamb{display:block}.navbtn{display:none}.hero{padding:65px 0}.hero-grid,.about,.contact{grid-template-columns:1fr}.hero-art{min-height:390px}.grid{grid-template-columns:repeat(2,1fr)}.about{gap:35px}.steps{grid-template-columns:1fr}.banner-in{align-items:flex-start;flex-direction:column}}
+@media(max-width:560px){h1{letter-spacing:-2px}.hero-art{transform:scale(.88);margin:-25px 0}.grid,.work-grid{grid-template-columns:1fr}.strip-in{justify-content:center}.strip b{font-size:9px}.points{grid-template-columns:1fr}form{grid-template-columns:1fr;padding:18px}.field.full{grid-column:auto}.foot{align-items:flex-start;flex-direction:column}.footlinks{flex-wrap:wrap}}
+
+*{transition:background-color .35s,border-color .35s,color .35s}
+.pal{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:50}
+.pal-toggle{display:flex;align-items:center;gap:8px;border:1px solid rgba(var(--text-rgb),.22);background:rgba(var(--s3-rgb),.96);color:rgb(var(--text-rgb));border-radius:50px;padding:11px 16px;font:inherit;font-size:12px;font-weight:800;cursor:pointer;box-shadow:0 12px 34px rgba(0,0,0,.35)}
+.pal-panel{display:none;position:absolute;right:0;bottom:52px;width:min(290px,calc(100vw - 32px));padding:14px;gap:8px;border:1px solid rgba(var(--text-rgb),.2);border-radius:18px;background:rgba(var(--s3-rgb),.98);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.pal.open .pal-panel{display:grid}
+.pal-panel small{font-size:10px;letter-spacing:1.5px;font-weight:800;color:rgb(var(--t3-rgb));margin:0 2px 2px}
+.chip{display:flex;align-items:center;gap:11px;width:100%;border:1px solid rgba(var(--text-rgb),.14);background:rgba(var(--text-rgb),.04);color:rgb(var(--text-rgb));border-radius:12px;padding:9px 11px;font:inherit;font-size:12px;font-weight:700;cursor:pointer;text-align:left}
+.chip:hover{border-color:rgb(var(--a1-rgb))}
+.chip.on{border-color:rgb(var(--a2-rgb));background:rgba(var(--a2-rgb),.12)}
+.navright{display:flex;align-items:center;gap:12px}.mode{width:40px;height:40px;border-radius:50%;border:1px solid rgba(var(--text-rgb),.22);background:rgba(var(--text-rgb),.06);color:inherit;font-size:17px;line-height:1;cursor:pointer;display:grid;place-items:center;padding:0}.mode:hover{border-color:rgb(var(--a2-rgb))}@media(max-width:900px){.navright{margin-left:auto}.hamb{margin-left:12px}}
+.sw{display:flex;flex:none}.sw i{width:15px;height:26px;display:block}.sw i:first-child{border-radius:7px 0 0 7px}.sw i:last-child{border-radius:0 7px 7px 0}
+</style>
+<script>
+(function(){
+var P={
+navy:{n:'Original Navy',bg:'#070b18',panel:'#10182b',a1:'#6b8cff',a2:'#65e5d1',a3:'#b18cff',text:'#f4f7ff',muted:'#aab6cc',on:'#ffffff'},
+ember:{n:'Sunset Ember',bg:'#120a0a',panel:'#1f1312',a1:'#ff7a45',a2:'#ffc857',a3:'#ff5c8a',text:'#fff6f0',muted:'#d1b8ae',on:'#1a0c08'},
+forest:{n:'Forest Aura',bg:'#07120e',panel:'#0f1f19',a1:'#3ddc97',a2:'#c6f06b',a3:'#4fd1c5',text:'#f0fff8',muted:'#a9c7ba',on:'#05130d'},
+violet:{n:'Royal Violet',bg:'#0d0818',panel:'#171028',a1:'#9b6bff',a2:'#ff7ad9',a3:'#6bb8ff',text:'#f7f2ff',muted:'#b9aed1',on:'#ffffff'},
+ocean:{n:'Ocean Teal',bg:'#06141a',panel:'#0d2029',a1:'#22b8cf',a2:'#7df9e0',a3:'#5c7cfa',text:'#f0fbff',muted:'#a6c3cc',on:'#04141a'},
+gold:{n:'Gold Noir',bg:'#0a0a0a',panel:'#151515',a1:'#d4af37',a2:'#f5e6b3',a3:'#b8860b',text:'#faf6ea',muted:'#bdb49a',on:'#140f00'},
+light:{n:'Light Minimal',bg:'#f7f8fc',panel:'#ffffff',a1:'#4f6bff',a2:'#0fb5a0',a3:'#8b5cf6',text:'#0f172a',muted:'#5b6478',on:'#ffffff',light:1}
+};
+function h(x){x=x.slice(1);return[0,2,4].map(function(i){return parseInt(x.substr(i,2),16)})}
+function mix(a,b,t){return a.map(function(v,i){return Math.round(v+(b[i]-v)*t)})}
+function set(n,c){document.documentElement.style.setProperty('--'+n+'-rgb',c.join(','))}
+window.PAL=P;
+window.applyPalette=function(k){
+var p=P[k]||P.navy,bg=h(p.bg),pa=h(p.panel),tx=h(p.text),mu=h(p.muted),bl=[0,0,0],lt=!!p.light;
+set('s0',lt?mix(bg,bl,.04):mix(bg,bl,.35));set('s1',bg);set('s2',mix(bg,pa,.5));set('s3',pa);set('s4',lt?mix(pa,bl,.05):mix(pa,tx,.07));
+set('d1',mix(bg,h(p.a1),.2));set('d2',mix(bg,h(p.a2),.2));set('d3',mix(bg,h(p.a3),.2));
+set('a1',h(p.a1));set('a2',h(p.a2));set('a3',h(p.a3));set('text',tx);set('t2',mu);set('t3',mix(mu,bg,.4));set('on',h(p.on));
+document.documentElement.style.colorScheme=lt?'light':'dark';
+document.documentElement.setAttribute('data-pal',k);
+try{localStorage.setItem('ideatrix-palette',k)}catch(e){}
+};
+var k='navy';try{k=localStorage.getItem('ideatrix-palette')||k}catch(e){}
+window.applyPalette(k);
+})();
+</script>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#top">
+<span class="logo">
+<svg viewBox="0 0 64 64" role="img" aria-label="Ideatrix logo">
+<defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop style="stop-color:rgb(var(--a1-rgb))"/><stop offset="1" style="stop-color:rgb(var(--a2-rgb))"/></linearGradient></defs>
+<rect x="2" y="2" width="60" height="60" rx="19" stroke-opacity=".4" style="fill:rgb(var(--d1-rgb));stroke:rgb(var(--a1-rgb))"/>
+<path d="M31 14c-7-5-15 1-15 8-6 2-8 10-3 15-3 7 2 14 9 14 3 5 10 5 12 0 7 0 12-7 9-14 5-5 3-13-3-15-1-8-9-13-15-8z" fill="none" stroke="url(#lg)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32 16v34M18 24l9 4-3 7 8 3M15 39l10-1 2 9M46 24l-9 4 3 7-8 3M49 39l-10-1-2 9" fill="none" stroke="url(#lg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="32" cy="31" r="3" style="fill:rgb(var(--a2-rgb))"/>
+</svg>
+</span><span>IDEATRIX<small>CREATIVE IT SOLUTIONS</small></span></a>
+<nav id="nav"><a href="#top">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#work">Projects</a><a href="#contact">Contact</a></nav>
+<div class="navright"><button class="mode" id="modeBtn" type="button" aria-label="Switch to light mode">☀️</button><a class="navbtn" href="#contact">Start a project ↗</a></div><button class="hamb" id="hamb" aria-label="Toggle menu">☰</button>
+</div></header>
+<main>
+<section class="hero" id="top"><div class="wrap hero-grid">
+<div><div class="kicker">Ideas • Intelligence • Innovation</div><h1>We give your<br><span>ideas a brain.</span></h1><p>We create beautiful websites, intelligent software, and digital experiences that make your business stand out and move forward.</p><div class="actions"><a class="btn" href="#services">Explore solutions ↗</a><a class="ghost" href="#contact">Let’s talk</a></div><div class="meta"><span>Designed around you</span><span>Built to grow</span></div></div>
+<div class="hero-art"><div class="halo"></div><div class="ring"></div><div class="ring r2"></div>
+<div class="brain-card"><div class="brain-card-top"><span>IDEATRIX SYSTEM / 01</span><span class="live"><i></i> CREATIVE MODE</span></div>
+<svg class="brain-svg" viewBox="0 0 360 240" role="img" aria-label="Original glowing brain illustration">
+<defs><linearGradient id="brainGrad" x1="0" y1="0" x2="1" y2="1"><stop style="stop-color:rgb(var(--a1-rgb))"/><stop offset=".55" style="stop-color:rgb(var(--a1-rgb))"/><stop offset="1" style="stop-color:rgb(var(--a2-rgb))"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<g fill-opacity=".08" stroke="url(#brainGrad)" stroke-width="2.5" stroke-linejoin="round" filter="url(#glow)" style="fill:rgb(var(--a1-rgb))">
+<path d="M177 43c-14-21-42-17-51 3-21-7-42 8-42 29-19 7-25 29-14 45-13 17-5 39 13 47-1 22 18 35 37 27 14 15 39 13 49-2V43c-9-13-23-14-32 0z"/>
+<path d="M183 43c14-21 42-17 51 3 21-7 42 8 42 29 19 7 25 29 14 45 13 17 5 39-13 47 1 22-18 35-37 27-14 15-39 13-49-2V43c9-13 23-14 32 0z"/>
+<path d="M180 40v153M105 72l27 8-7 22 22 11-5 20 18 15M255 72l-27 8 7 22-22 11 5 20-18 15M91 119l25-4 9 20-13 17M269 119l-25-4-9 20 13 17M127 49l17 14-3 18M233 49l-17 14 3 18M145 169l15-10 5 18M215 169l-15-10-5 18"/>
+</g><g style="fill:rgb(var(--a2-rgb))"><circle cx="132" cy="80" r="3"/><circle cx="228" cy="80" r="3"/><circle cx="115" cy="135" r="2.5"/><circle cx="245" cy="135" r="2.5"/><circle cx="180" cy="104" r="3.5"/></g>
+<g stroke-opacity=".5" stroke-width="1" style="stroke:rgb(var(--a2-rgb))"><path d="M132 80l48 24 48-24M115 135l65-31 65 31M145 169l35-65 35 65"/></g>
+</svg>
+<div class="brain-stats"><div><b>Think</b><small>STRATEGY</small></div><div><b>Build</b><small>TECHNOLOGY</small></div><div><b>Grow</b><small>IMPACT</small></div></div></div></div>
+</div></section>
+<div class="strip"><div class="wrap strip-in"><label>OUR DIGITAL TOOLKIT</label><b>WEB DEVELOPMENT</b><b>SOFTWARE</b><b>MOBILE APPS</b><b>DIGITAL MARKETING</b></div></div>
+<section class="services" id="services"><div class="wrap"><div class="head"><div class="kicker">What we do</div><h2>Smart solutions.<br>Made for real business.</h2><p>We blend creative thinking and modern technology to help turn your business challenges into useful digital products.</p></div><div class="grid">
+<article class="service"><div class="ico">⌘</div><h3>Website Development</h3><p>Responsive business websites, online stores, portfolio sites, and maintenance that keep your brand looking its best.</p><a href="#contact">Build your website ↗</a></article>
+<article class="service"><div class="ico">▣</div><h3>Custom Software</h3><p>Billing, inventory, employee management, dashboards, and workflows designed around your operation.</p><a href="#contact">Build software ↗</a></article>
+<article class="service"><div class="ico">▱</div><h3>Mobile Apps</h3><p>Modern mobile applications with intuitive experiences for customers, teams, and everyday business.</p><a href="#contact">Create an app ↗</a></article>
+<article class="service"><div class="ico">↗</div><h3>Digital Marketing</h3><p>SEO, social media, paid campaigns, content, and online branding to help people discover your business.</p><a href="#contact">Grow online ↗</a></article>
+</div></div></section>
+<section id="about"><div class="wrap about"><div class="brain-image">
+<svg viewBox="0 0 440 340" role="img" aria-label="Brain network image illustration">
+<defs><linearGradient id="bigbrain" x1="0" y1="0" x2="1" y2="1"><stop style="stop-color:rgb(var(--a1-rgb))"/><stop offset="1" style="stop-color:rgb(var(--a2-rgb))"/></linearGradient><filter id="bigglow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<g stroke="url(#bigbrain)" stroke-width="2.4" filter="url(#bigglow)" style="fill:rgba(var(--a1-rgb),0.06)">
+<path d="M218 49c-24-31-65-23-80 6-31-9-59 14-59 43-26 11-34 41-19 63-18 23-7 53 17 65-2 29 25 47 51 36 18 20 54 17 67-3V49c-12-18-31-19-42 0z"/>
+<path d="M222 49c24-31 65-23 80 6 31-9 59 14 59 43 26 11 34 41 19 63 18 23 7 53-17 65 2 29-25 47-51 36-18 20-54 17-67-3V49c12-18 31-19 42 0z"/>
+<path d="M220 45v244M100 96l40 11-10 30 32 17-8 27 25 21M340 96l-40 11 10 30-32 17 8 27-25 21M78 172l34-5 13 27-18 22M362 172l-34-5-13 27 18 22M146 64l22 19-5 24M294 64l-22 19 5 24M154 235l22-15 8 25M286 235l-22-15-8 25"/>
+</g><g style="fill:rgb(var(--a2-rgb))"><circle cx="140" cy="107" r="5"/><circle cx="300" cy="107" r="5"/><circle cx="112" cy="194" r="4"/><circle cx="328" cy="194" r="4"/><circle cx="220" cy="130" r="5"/><circle cx="220" cy="238" r="4"/></g><g stroke-opacity=".45" style="stroke:rgb(var(--a2-rgb))"><path d="M140 107l80 23 80-23M112 194l108-64 108 64M154 235l66-105 66 105"/></g>
+</svg><div class="image-caption">A mind built for digital possibilities</div></div>
+<div class="aboutcopy"><div class="kicker">About Ideatrix</div><h2>We think beyond code.</h2><p>Ideatrix is an IT software solutions company focused on turning ideas into meaningful digital experiences. We combine design, technology, and practical strategy to create products that feel simple, work reliably, and grow with your business.</p><p>From startups taking their first digital step to businesses modernizing their operations, we bring your goals into focus and build around them.</p><div class="points"><span>Human-first design</span><span>Modern technology</span><span>Scalable solutions</span><span>Reliable partnership</span></div></div></div></section>
+<section class="process"><div class="wrap"><div class="head"><div class="kicker">Our approach</div><h2>Good ideas deserve<br>great execution.</h2><p>A simple process helps us stay aligned, move thoughtfully, and deliver work that matters.</p></div><div class="steps"><article class="step"><div class="num">01 / DISCOVER</div><h3>Understand the challenge</h3><p>We listen, ask questions, and define what your business and users really need.</p></article><article class="step"><div class="num">02 / DESIGN & BUILD</div><h3>Make it happen</h3><p>We plan, design, and develop a tailored solution with usability and quality in mind.</p></article><article class="step"><div class="num">03 / LAUNCH</div><h3>Keep moving forward</h3><p>We support the launch and help your digital product evolve with your goals.</p></article></div></div></section>
+<section id="work"><div class="wrap"><div class="head"><div class="kicker">What we can create</div><h2>Digital work with<br>a clear purpose.</h2><p>Explore example project types we can tailor to your company and customers.</p></div><div class="work-grid">
+<article class="work"><div class="workpic"><svg viewBox="0 0 80 80" fill="none"><rect x="10" y="13" width="60" height="48" rx="6" stroke-width="2" style="stroke:rgb(var(--a1-rgb))"/><path d="M10 25h60M20 19h2m5 0h2M22 34h20M22 41h36M22 48h29" stroke-width="2" stroke-linecap="round" style="stroke:rgb(var(--a2-rgb))"/></svg></div><div class="workbody"><h3>Business Website</h3><p>A polished, responsive online home that explains your value and makes it easy to connect.</p><span class="pill">WEB DESIGN & DEVELOPMENT</span></div></article>
+<article class="work"><div class="workpic"><svg viewBox="0 0 80 80" fill="none"><rect x="9" y="12" width="62" height="56" rx="7" stroke-width="2" style="stroke:rgb(var(--a2-rgb))"/><path d="M9 26h62M20 19h2m5 0h2M20 56V43h9v13m6 0V35h9v21m6 0V47h9v9" stroke-width="2" stroke-linecap="round" style="stroke:rgb(var(--a2-rgb))"/></svg></div><div class="workbody"><h3>Business Dashboard</h3><p>A custom system that brings your operations, reports, and important information together.</p><span class="pill">CUSTOM SOFTWARE</span></div></article>
+<article class="work"><div class="workpic"><svg viewBox="0 0 80 80" fill="none"><rect x="23" y="7" width="34" height="66" rx="8" stroke-width="2" style="stroke:rgb(var(--a3-rgb))"/><path d="M29 16h22M29 24h22M29 33h22M29 42h14M36 65h8" stroke-width="2" stroke-linecap="round" style="stroke:rgb(var(--a3-rgb))"/><circle cx="40" cy="54" r="3" style="fill:rgb(var(--a2-rgb))"/></svg></div><div class="workbody"><h3>Mobile Experience</h3><p>A helpful app that keeps your service accessible and your customers connected.</p><span class="pill">MOBILE APPLICATION</span></div></article>
+</div></div></section>
+<section class="banner"><div class="wrap banner-in"><div><h2>Ready to make your idea real?</h2><p>Let’s find the right technology for your next big step.</p></div><a class="btn" href="#contact">Talk to our team ↗</a></div></section>
+<section id="contact"><div class="wrap contact"><div class="contact-info"><div class="kicker">Contact us</div><h2>Let’s build<br>your next idea.</h2><p>Tell us what you’re planning. Share a few details and we can start exploring the right solution for your business.</p><div class="detail"><strong>EMAIL</strong><span>hello@ideatrix.com</span></div><div class="detail"><strong>OUR SERVICES</strong><span>Web • Software • Apps • Marketing</span></div></div>
+<form id="form"><div><label for="name">YOUR NAME</label><input id="name" name="name" placeholder="Full name" required></div><div><label for="email">EMAIL ADDRESS</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div><div class="field full"><label for="service">SERVICE</label><select id="service" name="service"><option>Website Development</option><option>Custom Software</option><option>Mobile App</option><option>Digital Marketing</option><option>Other</option></select></div><div class="field full"><label for="message">TELL US ABOUT YOUR PROJECT</label><textarea id="message" name="message" placeholder="What would you like to build?" required></textarea></div><button class="btn" type="submit">Send inquiry ↗</button><p class="msg" id="msg"></p></form></div></section>
+</main>
+<footer><div class="wrap foot"><div><div class="footbrand">✦ IDEATRIX</div><small>Creative IT solutions for ambitious ideas.</small></div><div class="footlinks"><a href="#services">Services</a><a href="#about">About</a><a href="#work">Projects</a><a href="#contact">Contact</a></div><small>© <span id="year"></span> Ideatrix</small></div></footer>
+<script>
+const nav=document.querySelector('#nav');document.querySelector('#hamb').addEventListener('click',()=>nav.classList.toggle('show'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('show')));document.querySelector('#year').textContent=new Date().getFullYear();
+document.querySelector('#form').addEventListener('submit',e=>{e.preventDefault();document.querySelector('#msg').textContent='Thanks! This template form is a front-end demo. Connect it to your backend or email service to receive inquiries.';});
+</script>
+<div class="pal" id="pal"><div class="pal-panel" id="palPanel"><small>LIVE COLOR PALETTES</small></div><button class="pal-toggle" id="palBtn" aria-expanded="false">🎨 Palettes</button></div>
+<script>
+(function(){
+var pal=document.getElementById('pal'),panel=document.getElementById('palPanel'),btn=document.getElementById('palBtn'),P=window.PAL;
+Object.keys(P).forEach(function(k){var p=P[k],b=document.createElement('button');b.className='chip';b.dataset.k=k;
+b.innerHTML='<span class="sw"><i style="background:'+p.bg+';border:1px solid rgba(128,128,128,.4)"></i><i style="background:'+p.a1+'"></i><i style="background:'+p.a2+'"></i><i style="background:'+p.a3+'"></i></span><span>'+p.n+'</span>';
+b.addEventListener('click',function(){window.applyPalette(k);mark()});panel.appendChild(b)});
+function mark(){var c=document.documentElement.getAttribute('data-pal');panel.querySelectorAll('.chip').forEach(function(x){x.classList.toggle('on',x.dataset.k===c)})}
+btn.addEventListener('click',function(){var o=pal.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+var mb=document.getElementById('modeBtn'),orig=window.applyPalette;
+window.applyPalette=function(k){orig(k);try{if(!P[k].light)localStorage.setItem('ideatrix-last-dark',k)}catch(e){}sync();mark()};
+function sync(){var l=!!P[document.documentElement.getAttribute('data-pal')].light;mb.textContent=l?'🌙':'☀️';mb.setAttribute('aria-label',l?'Switch to dark mode':'Switch to light mode')}
+mb.addEventListener('click',function(){var c=document.documentElement.getAttribute('data-pal');if(P[c].light){var d='navy';try{d=localStorage.getItem('ideatrix-last-dark')||d}catch(e){}window.applyPalette(P[d]&&!P[d].light?d:'navy')}else{try{localStorage.setItem('ideatrix-last-dark',c)}catch(e){}window.applyPalette('light')}});
+sync();mark();
+})();
+</script>
+</body>
+</html>
